@@ -1,5 +1,5 @@
 from tkinter import *
-import ttk
+from tkinter import ttk
 
 root = Tk()
 root.title("Stock Manager")

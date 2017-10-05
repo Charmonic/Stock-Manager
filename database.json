@@ -1,5 +1,6 @@
 [
   {
+  "id": 0,
   "name": "Strawberry",
   "price": 1.25,
   "category": "Fruits",
@@ -8,6 +9,7 @@
   "UPC": "123456789012"
   },
   {
+    "id": 1,
     "name":"Banana",
     "price": 1.05,
     "category": "Fruits",
@@ -16,6 +18,7 @@
     "UPC": "516578512365"
   },
   {
+    "id": 2,
     "name": "Beef",
     "price": 9.85,
     "category": "Meats",
