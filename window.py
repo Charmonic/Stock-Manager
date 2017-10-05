@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+import json
 
 root = Tk()
 root.title("Stock Manager")
@@ -19,7 +20,14 @@ tree.heading("stock", text="Stock")
 tree.heading("stock_alert", text="Stock minimum (alert)")
 tree.heading("UPC", text="UPC")
 
-tree.insert("" , 0, text="Strawberry", values=("Fruits",1.25, 100, 20, "123456789012"))
+with open('database.json') as json_data:
+    data = json.load(json_data)
+
+index = 0
+for product in data:
+    tree.insert("" , index, text=product["name"], values=(product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"]))
+    index += 1
+    
 
 tree.pack()
 root.mainloop()
