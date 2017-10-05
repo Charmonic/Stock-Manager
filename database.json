@@ -1,0 +1,26 @@
+[
+  {
+  "name": "Strawberry",
+  "price": 1.25,
+  "category": "Fruits",
+  "stock": 100,
+  "stock_alert": 20,
+  "UPC": "123456789012"
+  },
+  {
+    "name":"Banana",
+    "price": 1.05,
+    "category": "Fruits",
+    "stock": 50,
+    "stock_alert": 20,
+    "UPC": "516578512365"
+  },
+  {
+    "name": "Beef",
+    "price": 9.85,
+    "category": "Meats",
+    "stock": 64,
+    "stock_alert": 15,
+    "UPC": "456879512346"
+  }
+]
