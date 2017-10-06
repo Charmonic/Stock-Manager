@@ -52,5 +52,41 @@
         "stock": "91",
         "stock_alert": "25",
         "UPC": "123456789123"
+    },
+    {
+        "id": "c1018474-aaa8-11e7-8ed0-08d40cf4f343",
+        "name": "Carrots",
+        "category": "Vegetables",
+        "price": "2.01",
+        "stock": "95",
+        "stock_alert": "27",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "028f0700-aaa9-11e7-bec8-08d40cf4f343",
+        "name": "Carrots",
+        "category": "Vegetables",
+        "price": "6.1",
+        "stock": "57",
+        "stock_alert": "8",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "694d8748-aaa9-11e7-9472-08d40cf4f343",
+        "name": "Asparagus",
+        "category": "Vegetables",
+        "price": "3.48",
+        "stock": "123",
+        "stock_alert": "41",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "8cd58736-aaa9-11e7-857c-08d40cf4f343",
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": "9.11",
+        "stock": "96",
+        "stock_alert": "28",
+        "UPC": "123456789123"
     }
 ]

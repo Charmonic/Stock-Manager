@@ -1,31 +1,15 @@
 from tkinter import *
 from tkinter import ttk
-import json
 from generateNumber import *
+from popupWindows import *
+import json
 
 jsonfile = "database.json"
-
-def printErrorWindow(error_text):
-    alertWindow = Tk()
-    alertWindow.title("Error")
-    alertWindow.configure(background="red")     
-    txt = Label(alertWindow, text=("Error:", error_text))
-    txt.configure(background="red", fg="white", font="bold")
-    txt.pack(padx=50, pady=50)
-
-def printValidationWindow(text):
-    window = Tk()
-    window.title("Error")
-    window.configure(background="green")     
-    txt = Label(window, text=text)
-    txt.configure(background="green", fg="white", font="bold")
-    txt.pack(padx=50, pady=50)
 
 def loadJson():
     with open(jsonfile) as json_data:
         return json.load(json_data)
 
-    
 def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd):
     if name == "" or category == "" or price == "" or stock == "" or stock_alert == "" or upc == "":
         printErrorWindow("empty input")
@@ -102,52 +86,3 @@ def addProduct():
     generate = Button(windowAdd, text="Generate random", command=lambda: fulfillEntryRandom(name, category, price, stock, stock_alert, upc))
     submit.grid(row=4, column=4, pady=20)
     generate.grid(row=4, column=2, padx=10)
-    
-def refreshResults(window):
-    window.destroy()
-    mainWindow()
-
-
-######## Main ########
-def mainWindow():
-    root = Tk()
-    root.title("Stock Manager")
-
-    tree = ttk.Treeview(root)
-
-    #define columns
-    tree["columns"]=("category","price","stock","stock_alert","UPC")
-    tree.column('category', anchor='center')
-    tree.column('price', anchor='center')
-    tree.column('stock', anchor='center')
-    tree.column('stock_alert', anchor='center')
-    tree.column('UPC', anchor='center')
-
-    #define name of the columns headers
-    tree.heading("category", text="Category")
-    tree.heading("price", text="Price")
-    tree.heading("stock", text="Stock")
-    tree.heading("stock_alert", text="Stock minimum (alert)")
-    tree.heading("UPC", text="UPC")
-
-    #read json file
-    with open(jsonfile) as json_data:
-        data = json.load(json_data)
-
-    #insert all the products in the tree view
-    index = 0
-    for product in data:
-        tree.insert("" , index, text=product["name"], values=(product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"]))
-        index += 1
-        
-    tree.pack(side=TOP, padx=10, pady=10)
-
-    #button "Add a new product"
-    buttonAdd = Button(root, text="Add a new product", command=addProduct)
-    buttonRefresh = Button(root, text="Refresh", command=lambda: refreshResults(root))
-    buttonAdd.pack(side=LEFT, padx=10, pady=10)
-    buttonRefresh.pack(side=LEFT, padx=10, pady=10)
-
-    root.mainloop()
-
-mainWindow()
