@@ -34,5 +34,23 @@
         "stock": "63",
         "stock_alert": "45",
         "UPC": "1223456789"
+    },
+    {
+        "id": "c533941e-aaa6-11e7-a836-08d40cf4f343",
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": "1.79",
+        "stock": "65",
+        "stock_alert": "12",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "5641e090-aaa7-11e7-8905-08d40cf4f343",
+        "name": "Corn",
+        "category": "Vegetables",
+        "price": "2.25",
+        "stock": "91",
+        "stock_alert": "25",
+        "UPC": "123456789123"
     }
 ]
