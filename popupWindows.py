@@ -11,8 +11,8 @@ def printErrorWindow(error_text):
 
 def printValidationWindow(text):
     window = Tk()
-    window.title("Error")
+    window.title("Success")
     window.configure(background="green")     
-    txt = Label(window, text=text)
+    txt = Label(window, text=("Success:", text))
     txt.configure(background="green", fg="white", font="bold")
     txt.pack(padx=50, pady=50)

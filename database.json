@@ -1,119 +1,83 @@
 [
     {
-        "UPC": "123456789012",
-        "category": "Fruits",
-        "id": 0,
-        "name": "Strawberry",
-        "price": 1.25,
-        "stock": 100,
-        "stock_alert": 20
-    },
-    {
-        "UPC": "516578512365",
-        "category": "Fruits",
-        "id": 1,
-        "name": "Banana",
-        "price": 1.05,
-        "stock": 50,
-        "stock_alert": 20
-    },
-    {
-        "UPC": "456879512346",
-        "category": "Meats",
-        "id": 2,
-        "name": "Beef",
-        "price": 9.85,
-        "stock": 64,
-        "stock_alert": 15
-    },
-    {
-        "id": "0",
-        "name": "Test",
-        "category": "random",
-        "price": "55",
-        "stock": "63",
-        "stock_alert": "45",
-        "UPC": "1223456789"
-    },
-    {
-        "id": "c533941e-aaa6-11e7-a836-08d40cf4f343",
         "name": "Broccoli",
         "category": "Vegetables",
         "price": "1.79",
-        "stock": "65",
-        "stock_alert": "12",
-        "UPC": "123456789123"
+        "stock": 65,
+        "stock_alert": 12,
+        "UPC": "123456789123",
+        "id": "c533941e-aaa6-11e7-a836-08d40cf4f343"
     },
     {
-        "id": "5641e090-aaa7-11e7-8905-08d40cf4f343",
         "name": "Corn",
         "category": "Vegetables",
         "price": "2.25",
-        "stock": "91",
-        "stock_alert": "25",
-        "UPC": "123456789123"
+        "stock": 91,
+        "stock_alert": 25,
+        "UPC": "123456789123",
+        "id": "5641e090-aaa7-11e7-8905-08d40cf4f343"
     },
     {
-        "id": "c1018474-aaa8-11e7-8ed0-08d40cf4f343",
         "name": "Carrots",
         "category": "Vegetables",
         "price": "2.01",
-        "stock": "95",
-        "stock_alert": "27",
-        "UPC": "123456789123"
+        "stock": 95,
+        "stock_alert": 27,
+        "UPC": "123456789123",
+        "id": "c1018474-aaa8-11e7-8ed0-08d40cf4f343"
     },
     {
-        "id": "028f0700-aaa9-11e7-bec8-08d40cf4f343",
         "name": "Carrots",
         "category": "Vegetables",
         "price": "6.1",
-        "stock": "57",
-        "stock_alert": "8",
-        "UPC": "123456789123"
+        "stock": 57,
+        "stock_alert": 8,
+        "UPC": "123456789123",
+        "id": "028f0700-aaa9-11e7-bec8-08d40cf4f343"
     },
     {
-        "id": "694d8748-aaa9-11e7-9472-08d40cf4f343",
         "name": "Asparagus",
         "category": "Vegetables",
         "price": "3.48",
-        "stock": "123",
-        "stock_alert": "41",
-        "UPC": "123456789123"
+        "stock": 123,
+        "stock_alert": 41,
+        "UPC": "123456789123",
+        "id": "694d8748-aaa9-11e7-9472-08d40cf4f343"
     },
     {
-        "id": "8cd58736-aaa9-11e7-857c-08d40cf4f343",
         "name": "Broccoli",
         "category": "Vegetables",
         "price": "9.11",
-        "stock": "96",
-        "stock_alert": "28",
-        "UPC": "123456789123"
+        "stock": 96,
+        "stock_alert": 28,
+        "UPC": "123456789123",
+        "id": "8cd58736-aaa9-11e7-857c-08d40cf4f343"
     },
     {
-        "id": "6438561c-aab1-11e7-aad7-08d40cf4f343",
         "name": "Potatoes",
         "category": "Vegetables",
         "price": "7.71",
-        "stock": "132",
-        "stock_alert": "46",
-        "UPC": "123456789123"
+        "stock": 132,
+        "stock_alert": 46,
+        "UPC": "123456789123",
+        "id": "6438561c-aab1-11e7-aad7-08d40cf4f343"
     },
     {
-        "id": "4f9f931c-ac83-11e7-b113-08d40cf4f343",
         "name": "Asparagus",
         "category": "Vegetables",
         "price": "9.8",
-        "stock": "114",
-        "stock_alert": "37",
-        "UPC": "123456789123"
+        "stock": 114,
+        "stock_alert": 37,
+        "UPC": "123456789123",
+        "id": "4f9f931c-ac83-11e7-b113-08d40cf4f343"
     },
     {
-        "id": "967d4b66-b024-11e7-99cf-08d40cf4f343",
         "name": "Potatoes",
         "category": "Vegetables",
         "price": "4.62",
-        "stock": "177",
-        "stock_alert": "68",
-        "UPC": "123456789123"
+        "stock": 177,
+        "stock_alert": 68,
+        "UPC": "123456789123",
+        "id": "967d4b66-b024-11e7-99cf-08d40cf4f343"
     }
 ]

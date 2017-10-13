@@ -23,8 +23,24 @@ def deleteProduct(tree):
         confirmationDelete(tree)
 
 def saveJson(tree):
-    print()
+    newJson = []
+    for product in tree.get_children():
 
+        prod = {}
+        prod["name"] = tree.item(product)["values"][0]
+        prod["category"] = tree.item(product)["values"][1]
+        prod["price"] = tree.item(product)["values"][2]
+        prod["stock"] = tree.item(product)["values"][3]
+        prod["stock_alert"] = tree.item(product)["values"][4]
+        prod["UPC"] = str(tree.item(product)["values"][5])
+        prod["id"] = tree.item(product)["values"][6]
+        newJson.append(prod)
+
+    with open(jsonfile, "w") as json_data:
+        json.dump(newJson, json_data, indent=4)
+        printValidationWindow("The database has been saved")
+
+        
 ######## Main ########
 def mainWindow():
     root = Tk()
