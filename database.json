@@ -88,5 +88,32 @@
         "stock": "96",
         "stock_alert": "28",
         "UPC": "123456789123"
+    },
+    {
+        "id": "6438561c-aab1-11e7-aad7-08d40cf4f343",
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "7.71",
+        "stock": "132",
+        "stock_alert": "46",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "4f9f931c-ac83-11e7-b113-08d40cf4f343",
+        "name": "Asparagus",
+        "category": "Vegetables",
+        "price": "9.8",
+        "stock": "114",
+        "stock_alert": "37",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "967d4b66-b024-11e7-99cf-08d40cf4f343",
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "4.62",
+        "stock": "177",
+        "stock_alert": "68",
+        "UPC": "123456789123"
     }
 ]
