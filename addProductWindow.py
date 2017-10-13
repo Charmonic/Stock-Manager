@@ -10,7 +10,7 @@ def loadJson():
     with open(jsonfile) as json_data:
         return json.load(json_data)
 
-def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd):
+def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, mainWindow):
     if name == "" or category == "" or price == "" or stock == "" or stock_alert == "" or upc == "":
         printErrorWindow("empty input")
     #TODO need to verify all the input 
@@ -30,8 +30,10 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd):
             json.dump(data, json_data, indent=4)
 
         windowAdd.destroy()
-        printValidationWindow("Your product is now on the database.\nPlease click on the refresh button") 
-
+        printValidationWindow("Your product is now on the database.") 
+        #TODO refresh result automatically
+        
+        
 def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     name.delete(0,END)
     category.delete(0,END)
@@ -47,7 +49,7 @@ def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     stock_alert.insert(0, stk[1])
     upc.insert(0, generateUPC())
 
-def addProduct():
+def addProduct(mainWindow):
     windowAdd = Tk()
     windowAdd.title("Add a new product")
 
@@ -82,7 +84,7 @@ def addProduct():
     upc.grid(row=3, column=4, padx=10,pady=10)
 
     #button
-    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd))
+    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd, mainWindow))
     generate = Button(windowAdd, text="Generate random", command=lambda: fulfillEntryRandom(name, category, price, stock, stock_alert, upc))
     submit.grid(row=4, column=4, pady=20)
     generate.grid(row=4, column=2, padx=10)
