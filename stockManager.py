@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from addProductWindow import *
+from deleteProductWindow import *
 from popupWindows import *
 import json
 
@@ -18,9 +19,8 @@ def deleteProduct(tree):
     if(len(tree.selection()) == 0):
         printErrorWindow("No row selected")
     else:
-        selected_item = tree.selection()[0] #get selected item    
-        tree.delete(selected_item)
-    
+        selected_item = tree.selection()[0] #get selected item
+        confirmationDelete(tree)
 
 def saveJson(tree):
     print()
