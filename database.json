@@ -1,23 +1,5 @@
 [
     {
-        "name": "Corn",
-        "category": "Vegetables",
-        "price": "2.25",
-        "stock": 91,
-        "stock_alert": 25,
-        "UPC": "123456789123",
-        "id": "5641e090-aaa7-11e7-8905-08d40cf4f343"
-    },
-    {
-        "name": "Carrots",
-        "category": "Vegetables",
-        "price": "2.01",
-        "stock": 95,
-        "stock_alert": 27,
-        "UPC": "123456789123",
-        "id": "c1018474-aaa8-11e7-8ed0-08d40cf4f343"
-    },
-    {
         "name": "Carrots",
         "category": "Vegetables",
         "price": "6.1",
@@ -115,5 +97,14 @@
         "stock_alert": 79,
         "UPC": "123456789123",
         "id": "c7ef67ba-b411-11e7-b40c-08d40cf4f343"
+    },
+    {
+        "name": "Carrots",
+        "category": "Vegetables",
+        "price": "1.01",
+        "stock": 84,
+        "stock_alert": 22,
+        "UPC": "123456789123",
+        "id": "a3ffca86-b450-11e7-90d4-08d40cf4f343"
     }
 ]

@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from popupWindows import *
 
 def confirmationDelete(tree):
     window = Tk()
@@ -17,4 +18,4 @@ def confirmationDelete(tree):
 def delete(tree, window):
     tree.delete(tree.selection()[0])
     window.destroy()
-    
+    printValidationWindow("The product has been temporary deleted.\nClick on save to push the modifications to the database")
