@@ -1,14 +1,5 @@
 [
     {
-        "name": "Broccoli",
-        "category": "Vegetables",
-        "price": "1.79",
-        "stock": 65,
-        "stock_alert": 12,
-        "UPC": "123456789123",
-        "id": "c533941e-aaa6-11e7-a836-08d40cf4f343"
-    },
-    {
         "name": "Corn",
         "category": "Vegetables",
         "price": "2.25",
@@ -81,39 +72,48 @@
         "id": "967d4b66-b024-11e7-99cf-08d40cf4f343"
     },
     {
-        "id": "9fa1a7c8-b03b-11e7-9066-08d40cf4f343",
         "name": "Spinach",
         "category": "Vegetables",
         "price": "2.18",
-        "stock": "100",
-        "stock_alert": "30",
-        "UPC": "123456789123"
+        "stock": 100,
+        "stock_alert": 30,
+        "UPC": "123456789123",
+        "id": "9fa1a7c8-b03b-11e7-9066-08d40cf4f343"
     },
     {
-        "id": "b08e26a2-b03b-11e7-9461-08d40cf4f343",
         "name": "Spinach",
         "category": "Vegetables",
         "price": "1.67",
-        "stock": "189",
-        "stock_alert": "74",
-        "UPC": "123456789123"
+        "stock": 189,
+        "stock_alert": 74,
+        "UPC": "123456789123",
+        "id": "b08e26a2-b03b-11e7-9461-08d40cf4f343"
     },
     {
-        "id": "7ec9dffe-b03c-11e7-9fb8-08d40cf4f343",
         "name": "Carrots",
         "category": "Vegetables",
         "price": "9.83",
-        "stock": "170",
-        "stock_alert": "65",
-        "UPC": "123456789123"
+        "stock": 170,
+        "stock_alert": 65,
+        "UPC": "123456789123",
+        "id": "7ec9dffe-b03c-11e7-9fb8-08d40cf4f343"
     },
     {
-        "id": "94b47406-b03c-11e7-aa6f-08d40cf4f343",
         "name": "Asparagus",
         "category": "Vegetables",
         "price": "2.47",
-        "stock": "89",
-        "stock_alert": "24",
-        "UPC": "123456789123"
+        "stock": 89,
+        "stock_alert": 24,
+        "UPC": "123456789123",
+        "id": "94b47406-b03c-11e7-aa6f-08d40cf4f343"
+    },
+    {
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "3.47",
+        "stock": 198,
+        "stock_alert": 79,
+        "UPC": "123456789123",
+        "id": "c7ef67ba-b411-11e7-b40c-08d40cf4f343"
     }
 ]

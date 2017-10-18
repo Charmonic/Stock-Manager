@@ -11,9 +11,17 @@ def loadJson():
     with open(jsonfile) as json_data:
         return json.load(json_data)
 
-def refreshResults(window):
-    window.destroy()
-    mainWindow()
+def refreshResults(tree):
+    for product in tree.get_children():
+        tree.delete(product)
+    
+    with open(jsonfile) as json_data:
+        data = json.load(json_data)    
+    index = 0
+    for product in data:
+        tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
+        index += 1
+    printValidationWindow("List refreshed")
 
 def deleteProduct(tree):
     if(len(tree.selection()) == 0):
@@ -86,7 +94,7 @@ def mainWindow():
     
     buttonAdd = Button(frame, text="Add a new product", command=lambda:addProduct(root), width = buttonWidth)
     buttonDelete = Button(frame, text="Delete selected element", command=lambda: deleteProduct(tree), width = buttonWidth)
-    buttonRefresh = Button(frame, text="Refresh", command=lambda: refreshResults(root), width = buttonWidth)
+    buttonRefresh = Button(frame, text="Refresh", command=lambda: refreshResults(tree), width = buttonWidth)
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)
     
     buttonAdd.grid(row=0, column=0)
