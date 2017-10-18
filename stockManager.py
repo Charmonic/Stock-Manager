@@ -92,7 +92,7 @@ def mainWindow():
     frame.pack(side=LEFT, padx=10, pady=10)
     buttonWidth = 25
     
-    buttonAdd = Button(frame, text="Add a new product", command=lambda:addProduct(root), width = buttonWidth)
+    buttonAdd = Button(frame, text="Add a new product", command=lambda:addProduct(tree), width = buttonWidth)
     buttonDelete = Button(frame, text="Delete selected element", command=lambda: deleteProduct(tree), width = buttonWidth)
     buttonRefresh = Button(frame, text="Refresh", command=lambda: refreshResults(tree), width = buttonWidth)
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)

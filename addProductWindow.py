@@ -10,7 +10,7 @@ def loadJson():
     with open(jsonfile) as json_data:
         return json.load(json_data)
 
-def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, mainWindow):
+def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, tree):
     if name == "" or category == "" or price == "" or stock == "" or stock_alert == "" or upc == "":
         printErrorWindow("empty input")
     #TODO need to verify all the input 
@@ -30,9 +30,18 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
             json.dump(data, json_data, indent=4)
 
         windowAdd.destroy()
-        printValidationWindow("Your product is now on the database.") 
-        #TODO refresh result automatically
+        printValidationWindow("Your product is now on the database.")
         
+        #refresh result automatically
+        for product in tree.get_children():
+            tree.delete(product)
+    
+        with open(jsonfile) as json_data:
+            data = json.load(json_data)    
+        index = 0
+        for product in data:
+            tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
+            index += 1
         
 def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     name.delete(0,END)
@@ -49,7 +58,7 @@ def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     stock_alert.insert(0, stk[1])
     upc.insert(0, generateUPC())
 
-def addProduct(mainWindow):
+def addProduct(tree):
     windowAdd = Tk()
     windowAdd.title("Add a new product")
 
@@ -84,7 +93,7 @@ def addProduct(mainWindow):
     upc.grid(row=3, column=4, padx=10,pady=10)
 
     #button
-    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd, mainWindow))
+    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd, tree))
     generate = Button(windowAdd, text="Generate random", command=lambda: fulfillEntryRandom(name, category, price, stock, stock_alert, upc))
     submit.grid(row=4, column=4, pady=20)
     generate.grid(row=4, column=2, padx=10)

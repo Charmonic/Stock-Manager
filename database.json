@@ -106,5 +106,23 @@
         "stock_alert": 22,
         "UPC": "123456789123",
         "id": "a3ffca86-b450-11e7-90d4-08d40cf4f343"
+    },
+    {
+        "id": "ac82ddca-b451-11e7-94c7-08d40cf4f343",
+        "name": "Asparagus",
+        "category": "Vegetables",
+        "price": "4.5",
+        "stock": "169",
+        "stock_alert": "64",
+        "UPC": "123456789123"
+    },
+    {
+        "id": "3c541b78-b452-11e7-9d1c-08d40cf4f343",
+        "name": "Corn",
+        "category": "Vegetables",
+        "price": "4.82",
+        "stock": "99",
+        "stock_alert": "29",
+        "UPC": "123456789123"
     }
 ]
