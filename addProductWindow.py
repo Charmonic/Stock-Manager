@@ -16,7 +16,7 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
     #TODO need to verify all the input 
     else:
         newProduct = {}
-        newProduct["id"] = generateId() #TODO
+        newProduct["id"] = generateId()
         newProduct["name"] = name
         newProduct["category"] = category
         newProduct["price"] = price
@@ -45,13 +45,13 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
         
 def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     name.delete(0,END)
-    category.delete(0,END)
+    #category.delete(0,END)
     price.delete(0,END)
     stock.delete(0,END)
     stock_alert.delete(0,END)
     upc.delete(0,END)
     name.insert(0, generateNameProduct())
-    category.insert(0, "Vegetables")
+    category.selection_set(0)
     price.insert(0, generatePrice())
     stk = generateStockandStockLimit()
     stock.insert(0, stk[0])
@@ -61,22 +61,33 @@ def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
 def addProduct(tree):
     windowAdd = Tk()
     windowAdd.title("Add a new product")
+    categories = ["Vegetables", "Fruits", "Seafood", "Beverages", "Cheese", "Meat", "Snack"]
 
+    
     #label
     txt1 = Label(windowAdd, text="Name:")
-    txt2 = Label(windowAdd, text="Category:")
-    txt3 = Label(windowAdd, text="Price:")
+    txt2 = Label(windowAdd, text="Price:")
+    txt3 = Label(windowAdd, text="Category:")
     txt4 = Label(windowAdd, text="Stock:")
     txt5 = Label(windowAdd, text="Stock minimum:")
     txt6 = Label(windowAdd, text="UPC:")
 
     #entry
     name = Entry(windowAdd)
-    category = Entry(windowAdd)
-    price = Entry(windowAdd)
+    price = Entry(windowAdd)    
     stock = Entry(windowAdd)
     stock_alert = Entry(windowAdd)
     upc = Entry(windowAdd)
+    
+    #category listbox
+    frame = Frame(windowAdd)
+    scrollbar = Scrollbar(frame, orient=VERTICAL)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    category = Listbox(frame, yscrollcommand=scrollbar.set, height=3)
+    category.pack()
+    for cat in categories:
+        category.insert(END, cat)
+    scrollbar.config(command=category.yview)
 
     #grid
     txt1.grid(row=1, sticky=E, padx=10)
@@ -86,14 +97,14 @@ def addProduct(tree):
     txt5.grid(row=2, column=3, padx=40)
     txt6.grid(row=3, column=3, padx=40)
     name.grid(row=1, column=2, padx=10,pady=10)
-    category.grid(row=2, column=2, padx=10,pady=10)
-    price.grid(row=3, column=2, padx=10,pady=10)
+    frame.grid(row=3, column=2, padx=10,pady=10)
+    price.grid(row=2, column=2, padx=10,pady=10)
     stock.grid(row=1, column=4, padx=10,pady=10)
     stock_alert.grid(row=2, column=4, padx=10,pady=10)
     upc.grid(row=3, column=4, padx=10,pady=10)
 
     #button
-    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd, tree))
+    submit = Button(windowAdd, text="Submit", command=lambda: createNewProduct(name.get(), category.get(category.curselection()), price.get(), stock.get(), stock_alert.get(), upc.get(), windowAdd, tree))
     generate = Button(windowAdd, text="Generate random", command=lambda: fulfillEntryRandom(name, category, price, stock, stock_alert, upc))
     submit.grid(row=4, column=4, pady=20)
     generate.grid(row=4, column=2, padx=10)
