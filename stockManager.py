@@ -53,18 +53,22 @@ def saveJson(tree):
 def mainWindow():
     root = Tk()
     root.title("Stock Manager")
-
-    tree = ttk.Treeview(root)
+    treeFrame = Frame(root)
+    scrollbar = Scrollbar(treeFrame)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    tree = ttk.Treeview(treeFrame, yscrollcommand=scrollbar.set, height=35)
+    tree.pack()
+    scrollbar.config(command=tree.yview)
     tree["show"] = "headings"
 
     #define columns
     tree["columns"]=("name","category","price","stock","stock_alert","UPC", "id")
-    tree.column('category', anchor='center')
-    tree.column('price', anchor='center')
-    tree.column('stock', anchor='center')
-    tree.column('stock_alert', anchor='center')
-    tree.column('UPC', anchor='center')
-    tree.column('id', anchor='center')
+    tree.column('category', anchor='center', width=250)
+    tree.column('price', anchor='center', width=250)
+    tree.column('stock', anchor='center', width=250)
+    tree.column('stock_alert', anchor='center', width=250)
+    tree.column('UPC', anchor='center', width=250)
+    tree.column('id', anchor='center', width=250)
 
     #define name of the columns headers
     tree.heading("name", text="Name")
@@ -85,7 +89,8 @@ def mainWindow():
         tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
         index += 1
         
-    tree.pack(side=TOP, padx=10, pady=10)
+    #tree.pack(side=TOP, padx=10, pady=10)
+    treeFrame.pack(side=TOP, padx=10, pady=10)
 
     #buttons
     frame = Frame(root)

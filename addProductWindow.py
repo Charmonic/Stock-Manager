@@ -45,7 +45,6 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
         
 def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     name.delete(0,END)
-    #category.delete(0,END)
     price.delete(0,END)
     stock.delete(0,END)
     stock_alert.delete(0,END)

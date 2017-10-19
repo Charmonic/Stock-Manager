@@ -126,21 +126,12 @@
         "id": "3c541b78-b452-11e7-9d1c-08d40cf4f343"
     },
     {
-        "id": "5650e8fa-b4d9-11e7-bc5b-08d40cf4f343",
         "name": "Asparagus",
-        "category": "Seafood",
-        "price": "5.86",
-        "stock": "184",
-        "stock_alert": "72",
-        "UPC": "123456789123"
-    },
-    {
-        "id": "5f20d186-b4d9-11e7-92e7-08d40cf4f343",
-        "name": "Broccoli",
-        "category": "Fruits",
-        "price": "8.71",
-        "stock": "166",
-        "stock_alert": "63",
-        "UPC": "123456789123"
+        "category": "Vegetables",
+        "price": "3.28",
+        "stock": 138,
+        "stock_alert": 49,
+        "UPC": "123456789123",
+        "id": "ecc2a0d8-b4db-11e7-b30c-08d40cf4f343"
     }
 ]
