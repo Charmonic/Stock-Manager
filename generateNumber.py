@@ -22,3 +22,16 @@ def generateStockandStockLimit():
 def generatePrice():
     return round(random.uniform(1,10),2)
 
+def isNumber(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+    
+def isCorrectUPC(upc):
+    if isNumber(upc) == True and len(upc) == 12:
+        return True
+    else:
+        return False
+    

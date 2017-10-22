@@ -10,10 +10,20 @@ def loadJson():
     with open(jsonfile) as json_data:
         return json.load(json_data)
 
+
 def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, tree):
-    if name == "" or category == "" or price == "" or stock == "" or stock_alert == "" or upc == "":
+    if name == "" or category == None or price == "" or stock == "" or stock_alert == "" or upc == "":
         printErrorWindow("empty input")
-    #TODO need to verify all the input 
+
+    elif isNumber(price) == False or isNumber(stock) == False or isNumber(stock_alert) == False:
+        printErrorWindow("incorrect input: 'price', 'stock' and 'stock minimum' must be numbers")
+
+    elif isCorrectUPC(upc) == False:
+        printErrorWindow("incorrect UPC")
+
+    elif isNumber(name) == True:
+        printErrorWindow("name must not be a number")
+    
     else:
         newProduct = {}
         newProduct["id"] = generateId()
