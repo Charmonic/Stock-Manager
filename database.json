@@ -178,5 +178,14 @@
         "stock_alert": 58,
         "UPC": "123456789123",
         "id": "a2faafcc-b77e-11e7-947f-08d40cf4f343"
+    },
+    {
+        "id": "bc9e0010-b790-11e7-a945-08d40cf4f343",
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": "2.27",
+        "stock": "177",
+        "stock_alert": "68",
+        "UPC": "091442913962"
     }
 ]

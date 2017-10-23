@@ -4,11 +4,13 @@ import random
 def generateId():
     return str(uuid.uuid1())
 
-
-#TODO by Carlos 
 def generateUPC():
-    #return a string of 12 digits
-    return "123456789123"
+    upc = ""
+    i = 0
+    while i < 12:
+        upc += str(random.randint(0,9))
+        i += 1
+    return upc
 
 def generateNameProduct():
     names = ["Asparagus","Broccoli", "Carrots", "Corn", "Potatoes", "Spinach", "Zucchini"]
