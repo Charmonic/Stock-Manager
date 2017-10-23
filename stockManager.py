@@ -111,13 +111,20 @@ def mainWindow():
     
     buttonAdd = Button(frame, text="Add a new product", command=lambda:addProduct(tree), width = buttonWidth)
     buttonDelete = Button(frame, text="Delete selected element", command=lambda: deleteProduct(tree), width = buttonWidth)
-    buttonRefresh = Button(frame, text="Refresh", command=lambda: refreshResults(tree), width = buttonWidth)
+    buttonRefresh = Button(frame, text="Actualize with database", command=lambda: refreshResults(tree), width = buttonWidth)
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)
     buttonModify = Button(frame, text="Modify selected element", command=lambda: modifyProduct(tree), width = buttonWidth)
+
+    buttonAdd.configure(background="#33cc33", fg="white", font="Bold")
+    buttonModify.configure(background="#33cc33", fg="white", font="Bold")
+    buttonDelete.configure(background="#33cc33", fg="white", font="Bold")
+    buttonSave.configure(background="#ff9933", fg="white", font="Bold")
+    buttonRefresh.configure(background="#3399ff", fg="white", font="Bold")
+    
     
     buttonAdd.grid(row=0, column=0)
-    buttonDelete.grid(row=0, column=1, padx=20)
-    buttonModify.grid(row=0, column=2)
+    buttonModify.grid(row=0, column=1, padx=20)
+    buttonDelete.grid(row=0, column=2)
     buttonRefresh.grid(row=1, column=0, pady=10)
     buttonSave.grid(row=1, column=1, padx=20)
 

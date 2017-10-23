@@ -223,5 +223,14 @@
         "stock_alert": 23,
         "UPC": "187215271773",
         "id": "c13e7524-b791-11e7-a503-08d40cf4f343"
+    },
+    {
+        "name": "Zucchini",
+        "category": "Vegetables",
+        "price": "2.81",
+        "stock": 189,
+        "stock_alert": 60,
+        "UPC": "400520882761",
+        "id": "64aeff5a-b7fc-11e7-98f4-08d40cf4f343"
     }
 ]
