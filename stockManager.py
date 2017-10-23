@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from addProductWindow import *
 from deleteProductWindow import *
+from modifyProductWindow import *
 from popupWindows import *
 import json
 
@@ -30,6 +31,13 @@ def deleteProduct(tree):
         selected_item = tree.selection()[0] #get selected item
         confirmationDelete(tree)
 
+def modifyProduct(tree):
+    if(len(tree.selection()) == 0):
+        printErrorWindow("No row selected")
+    else:
+        selected_item = tree.selection()[0] #get selected item
+        modificationWindow(tree)
+
 def saveJson(tree):
     newJson = []
     for product in tree.get_children():
@@ -53,6 +61,9 @@ def saveJson(tree):
 def mainWindow():
     root = Tk()
     root.title("Stock Manager")
+    root.configure(background='black')
+    root.configure(background='white')
+    
     treeFrame = Frame(root)
     scrollbar = Scrollbar(treeFrame)
     scrollbar.pack(side=RIGHT, fill=Y)
@@ -94,6 +105,7 @@ def mainWindow():
 
     #buttons
     frame = Frame(root)
+    frame.configure(background='white')
     frame.pack(side=LEFT, padx=10, pady=10)
     buttonWidth = 25
     
@@ -101,9 +113,11 @@ def mainWindow():
     buttonDelete = Button(frame, text="Delete selected element", command=lambda: deleteProduct(tree), width = buttonWidth)
     buttonRefresh = Button(frame, text="Refresh", command=lambda: refreshResults(tree), width = buttonWidth)
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)
+    buttonModify = Button(frame, text="Modify selected element", command=lambda: modifyProduct(tree), width = buttonWidth)
     
     buttonAdd.grid(row=0, column=0)
     buttonDelete.grid(row=0, column=1, padx=20)
+    buttonModify.grid(row=0, column=2)
     buttonRefresh.grid(row=1, column=0, pady=10)
     buttonSave.grid(row=1, column=1, padx=20)
 

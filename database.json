@@ -2,7 +2,7 @@
     {
         "name": "Carrots",
         "category": "Vegetables",
-        "price": "6.1",
+        "price": 9,
         "stock": 57,
         "stock_alert": 8,
         "UPC": "123456789123",
@@ -153,30 +153,30 @@
         "id": "d43c461c-b5ce-11e7-b6e6-08d40cf4f343"
     },
     {
-        "id": "36ce80f4-b77e-11e7-9f05-08d40cf4f343",
         "name": "fdqfds",
         "category": "Seafood",
-        "price": "555",
-        "stock": "555",
-        "stock_alert": "55",
-        "UPC": "555555555555"
+        "price": 555,
+        "stock": 555,
+        "stock_alert": 55,
+        "UPC": "555555555555",
+        "id": "36ce80f4-b77e-11e7-9f05-08d40cf4f343"
     },
     {
-        "id": "94684df4-b77e-11e7-9b0c-08d40cf4f343",
         "name": "gdsq",
         "category": "Fruits",
-        "price": "5",
-        "stock": "654",
-        "stock_alert": "645",
-        "UPC": "645111111111"
+        "price": 5,
+        "stock": 654,
+        "stock_alert": 645,
+        "UPC": "645111111111",
+        "id": "94684df4-b77e-11e7-9b0c-08d40cf4f343"
     },
     {
-        "id": "a2faafcc-b77e-11e7-947f-08d40cf4f343",
         "name": "Carrots",
         "category": "Vegetables",
         "price": "5.49",
-        "stock": "156",
-        "stock_alert": "58",
-        "UPC": "123456789123"
+        "stock": 156,
+        "stock_alert": 58,
+        "UPC": "123456789123",
+        "id": "a2faafcc-b77e-11e7-947f-08d40cf4f343"
     }
 ]
