@@ -25,6 +25,7 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
         printErrorWindow("name must not be a number")
     
     else:
+        #creating the product object
         newProduct = {}
         newProduct["id"] = generateId()
         newProduct["name"] = name
@@ -34,24 +35,11 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
         newProduct["stock_alert"] = stock_alert
         newProduct["UPC"] = upc
 
-        data = loadJson()            
-        data.append(newProduct)
-        with open(jsonfile, 'w') as json_data:
-            json.dump(data, json_data, indent=4)
+        #insert the product in the treeview
+        tree.insert("" , "end", text=newProduct["name"], values=(newProduct["name"], newProduct["category"], newProduct["price"], newProduct["stock"], newProduct["stock_alert"], newProduct["UPC"], newProduct["id"]))
 
         windowAdd.destroy()
-        printValidationWindow("Your product is now on the database.")
-        
-        #refresh result automatically
-        for product in tree.get_children():
-            tree.delete(product)
-    
-        with open(jsonfile) as json_data:
-            data = json.load(json_data)    
-        index = 0
-        for product in data:
-            tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
-            index += 1
+        printValidationWindow("Your product has been temporary added.\nClick on save to push the modifications to the database")
         
 def fulfillEntryRandom(name, category, price, stock, stock_alert, upc):
     name.delete(0,END)
