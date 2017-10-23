@@ -1,191 +1,227 @@
 [
     {
-        "name": "Carrots",
+        "name": "Broccoli",
         "category": "Vegetables",
-        "price": 9,
-        "stock": 57,
-        "stock_alert": 8,
-        "UPC": "123456789123",
-        "id": "028f0700-aaa9-11e7-bec8-08d40cf4f343"
+        "price": "5.58",
+        "stock": 125,
+        "stock_alert": 42,
+        "UPC": "954575258929",
+        "id": "8b108c5e-b791-11e7-ba1f-08d40cf4f343"
     },
     {
         "name": "Asparagus",
         "category": "Vegetables",
-        "price": "3.48",
-        "stock": 123,
-        "stock_alert": 41,
-        "UPC": "123456789123",
-        "id": "694d8748-aaa9-11e7-9472-08d40cf4f343"
+        "price": "8.51",
+        "stock": 112,
+        "stock_alert": 36,
+        "UPC": "58099571137",
+        "id": "8db438ae-b791-11e7-b400-08d40cf4f343"
     },
     {
         "name": "Broccoli",
         "category": "Vegetables",
-        "price": "9.11",
-        "stock": 96,
-        "stock_alert": 28,
-        "UPC": "123456789123",
-        "id": "8cd58736-aaa9-11e7-857c-08d40cf4f343"
+        "price": "4.75",
+        "stock": 71,
+        "stock_alert": 15,
+        "UPC": "956159552654",
+        "id": "9007da64-b791-11e7-a9aa-08d40cf4f343"
     },
     {
-        "name": "Potatoes",
+        "name": "Zucchini",
         "category": "Vegetables",
-        "price": "7.71",
-        "stock": 132,
-        "stock_alert": 46,
-        "UPC": "123456789123",
-        "id": "6438561c-aab1-11e7-aad7-08d40cf4f343"
-    },
-    {
-        "name": "Asparagus",
-        "category": "Vegetables",
-        "price": "9.8",
-        "stock": 114,
-        "stock_alert": 37,
-        "UPC": "123456789123",
-        "id": "4f9f931c-ac83-11e7-b113-08d40cf4f343"
-    },
-    {
-        "name": "Potatoes",
-        "category": "Vegetables",
-        "price": "4.62",
-        "stock": 177,
-        "stock_alert": 68,
-        "UPC": "123456789123",
-        "id": "967d4b66-b024-11e7-99cf-08d40cf4f343"
-    },
-    {
-        "name": "Spinach",
-        "category": "Vegetables",
-        "price": "2.18",
-        "stock": 100,
-        "stock_alert": 30,
-        "UPC": "123456789123",
-        "id": "9fa1a7c8-b03b-11e7-9066-08d40cf4f343"
-    },
-    {
-        "name": "Spinach",
-        "category": "Vegetables",
-        "price": "1.67",
-        "stock": 189,
-        "stock_alert": 74,
-        "UPC": "123456789123",
-        "id": "b08e26a2-b03b-11e7-9461-08d40cf4f343"
+        "price": "8.14",
+        "stock": 123,
+        "stock_alert": 41,
+        "UPC": "661059252895",
+        "id": "9236a074-b791-11e7-ae5c-08d40cf4f343"
     },
     {
         "name": "Carrots",
         "category": "Vegetables",
-        "price": "9.83",
-        "stock": 170,
-        "stock_alert": 65,
-        "UPC": "123456789123",
-        "id": "7ec9dffe-b03c-11e7-9fb8-08d40cf4f343"
-    },
-    {
-        "name": "Asparagus",
-        "category": "Vegetables",
-        "price": "2.47",
-        "stock": 89,
-        "stock_alert": 24,
-        "UPC": "123456789123",
-        "id": "94b47406-b03c-11e7-aa6f-08d40cf4f343"
-    },
-    {
-        "name": "Potatoes",
-        "category": "Vegetables",
-        "price": "3.47",
-        "stock": 198,
-        "stock_alert": 79,
-        "UPC": "123456789123",
-        "id": "c7ef67ba-b411-11e7-b40c-08d40cf4f343"
+        "price": "3.95",
+        "stock": 65,
+        "stock_alert": 12,
+        "UPC": "770413670809",
+        "id": "94a18c14-b791-11e7-b916-08d40cf4f343"
     },
     {
         "name": "Carrots",
         "category": "Vegetables",
-        "price": "1.01",
-        "stock": 84,
-        "stock_alert": 22,
-        "UPC": "123456789123",
-        "id": "a3ffca86-b450-11e7-90d4-08d40cf4f343"
+        "price": "9.71",
+        "stock": 102,
+        "stock_alert": 31,
+        "UPC": "509778752672",
+        "id": "979191fe-b791-11e7-8ccf-08d40cf4f343"
+    },
+    {
+        "name": "Carrots",
+        "category": "Vegetables",
+        "price": "1.4",
+        "stock": 159,
+        "stock_alert": 59,
+        "UPC": "15851567911",
+        "id": "9995df00-b791-11e7-a5ff-08d40cf4f343"
     },
     {
         "name": "Asparagus",
         "category": "Vegetables",
-        "price": "4.5",
-        "stock": 169,
-        "stock_alert": 64,
-        "UPC": "123456789123",
-        "id": "ac82ddca-b451-11e7-94c7-08d40cf4f343"
+        "price": "3.83",
+        "stock": 82,
+        "stock_alert": 21,
+        "UPC": "36283787329",
+        "id": "9bb0da34-b791-11e7-bdc6-08d40cf4f343"
     },
     {
         "name": "Corn",
         "category": "Vegetables",
-        "price": "4.82",
-        "stock": 99,
-        "stock_alert": 29,
-        "UPC": "123456789123",
-        "id": "3c541b78-b452-11e7-9d1c-08d40cf4f343"
+        "price": "5.56",
+        "stock": 132,
+        "stock_alert": 46,
+        "UPC": "386826398879",
+        "id": "9db35b14-b791-11e7-a7ea-08d40cf4f343"
+    },
+    {
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": "5.46",
+        "stock": 192,
+        "stock_alert": 76,
+        "UPC": "175260669950",
+        "id": "9f9eb066-b791-11e7-9cdc-08d40cf4f343"
+    },
+    {
+        "name": "Zucchini",
+        "category": "Vegetables",
+        "price": "2.67",
+        "stock": 128,
+        "stock_alert": 44,
+        "UPC": "93876759225",
+        "id": "a196dad2-b791-11e7-a927-08d40cf4f343"
     },
     {
         "name": "Asparagus",
         "category": "Vegetables",
-        "price": "3.28",
-        "stock": 138,
-        "stock_alert": 49,
-        "UPC": "123456789123",
-        "id": "ecc2a0d8-b4db-11e7-b30c-08d40cf4f343"
+        "price": "3.05",
+        "stock": 164,
+        "stock_alert": 62,
+        "UPC": "777672970207",
+        "id": "a3e68f5c-b791-11e7-bd18-08d40cf4f343"
+    },
+    {
+        "name": "Corn",
+        "category": "Vegetables",
+        "price": "8.65",
+        "stock": 104,
+        "stock_alert": 32,
+        "UPC": "639448180842",
+        "id": "a6779724-b791-11e7-bd76-08d40cf4f343"
+    },
+    {
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "1.76",
+        "stock": 162,
+        "stock_alert": 61,
+        "UPC": "517681625411",
+        "id": "a87eb264-b791-11e7-8632-08d40cf4f343"
+    },
+    {
+        "name": "Corn",
+        "category": "Vegetables",
+        "price": "2.08",
+        "stock": 162,
+        "stock_alert": 61,
+        "UPC": "722972754176",
+        "id": "aabfcb7a-b791-11e7-9b35-08d40cf4f343"
+    },
+    {
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "6.01",
+        "stock": 84,
+        "stock_alert": 22,
+        "UPC": "244657095411",
+        "id": "acfbb568-b791-11e7-acfa-08d40cf4f343"
+    },
+    {
+        "name": "Spinach",
+        "category": "Vegetables",
+        "price": "5.71",
+        "stock": 108,
+        "stock_alert": 34,
+        "UPC": "324859756336",
+        "id": "af1a9cf8-b791-11e7-8cde-08d40cf4f343"
+    },
+    {
+        "name": "Spinach",
+        "category": "Vegetables",
+        "price": "5.58",
+        "stock": 133,
+        "stock_alert": 46,
+        "UPC": "214857827546",
+        "id": "b1de46f6-b791-11e7-b875-08d40cf4f343"
+    },
+    {
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": "1.41",
+        "stock": 131,
+        "stock_alert": 45,
+        "UPC": "655053645690",
+        "id": "b3e739b4-b791-11e7-9812-08d40cf4f343"
     },
     {
         "name": "Asparagus",
         "category": "Vegetables",
-        "price": "7.69",
-        "stock": 135,
-        "stock_alert": 47,
-        "UPC": "123456789123",
-        "id": "9654da7e-b52b-11e7-96b0-08d40cf4f343"
-    },
-    {
-        "name": "Banana",
-        "category": "Fruits",
-        "price": 5,
-        "stock": 50,
-        "stock_alert": 10,
-        "UPC": "125421563578",
-        "id": "d43c461c-b5ce-11e7-b6e6-08d40cf4f343"
-    },
-    {
-        "name": "fdqfds",
-        "category": "Seafood",
-        "price": 555,
-        "stock": 555,
-        "stock_alert": 55,
-        "UPC": "555555555555",
-        "id": "36ce80f4-b77e-11e7-9f05-08d40cf4f343"
-    },
-    {
-        "name": "gdsq",
-        "category": "Fruits",
-        "price": 5,
-        "stock": 654,
-        "stock_alert": 645,
-        "UPC": "645111111111",
-        "id": "94684df4-b77e-11e7-9b0c-08d40cf4f343"
+        "price": "6.66",
+        "stock": 55,
+        "stock_alert": 7,
+        "UPC": "650496938653",
+        "id": "b60d7c0c-b791-11e7-90cb-08d40cf4f343"
     },
     {
         "name": "Carrots",
         "category": "Vegetables",
-        "price": "5.49",
-        "stock": 156,
-        "stock_alert": 58,
-        "UPC": "123456789123",
-        "id": "a2faafcc-b77e-11e7-947f-08d40cf4f343"
+        "price": "4.76",
+        "stock": 165,
+        "stock_alert": 62,
+        "UPC": "927863103783",
+        "id": "b845fe36-b791-11e7-af20-08d40cf4f343"
     },
     {
-        "id": "bc9e0010-b790-11e7-a945-08d40cf4f343",
-        "name": "Broccoli",
+        "name": "Corn",
         "category": "Vegetables",
-        "price": "2.27",
-        "stock": "177",
-        "stock_alert": "68",
-        "UPC": "091442913962"
+        "price": "4.01",
+        "stock": 188,
+        "stock_alert": 74,
+        "UPC": "954606026288",
+        "id": "bac99946-b791-11e7-bd6b-08d40cf4f343"
+    },
+    {
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "4.15",
+        "stock": 142,
+        "stock_alert": 51,
+        "UPC": "414846202418",
+        "id": "bcf7867a-b791-11e7-8851-08d40cf4f343"
+    },
+    {
+        "name": "Carrots",
+        "category": "Vegetables",
+        "price": "2.03",
+        "stock": 184,
+        "stock_alert": 72,
+        "UPC": "398232526415",
+        "id": "bf2adaf8-b791-11e7-8cf5-08d40cf4f343"
+    },
+    {
+        "name": "Asparagus",
+        "category": "Vegetables",
+        "price": "9.34",
+        "stock": 87,
+        "stock_alert": 23,
+        "UPC": "187215271773",
+        "id": "c13e7524-b791-11e7-a503-08d40cf4f343"
     }
 ]
