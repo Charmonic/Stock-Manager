@@ -9,15 +9,6 @@
         "id": "8b108c5e-b791-11e7-ba1f-08d40cf4f343"
     },
     {
-        "name": "Asparagus",
-        "category": "Vegetables",
-        "price": "8.51",
-        "stock": 112,
-        "stock_alert": 36,
-        "UPC": "58099571137",
-        "id": "8db438ae-b791-11e7-b400-08d40cf4f343"
-    },
-    {
         "name": "Broccoli",
         "category": "Vegetables",
         "price": "4.75",
@@ -54,24 +45,6 @@
         "id": "979191fe-b791-11e7-8ccf-08d40cf4f343"
     },
     {
-        "name": "Carrots",
-        "category": "Vegetables",
-        "price": "1.4",
-        "stock": 159,
-        "stock_alert": 59,
-        "UPC": "15851567911",
-        "id": "9995df00-b791-11e7-a5ff-08d40cf4f343"
-    },
-    {
-        "name": "Asparagus",
-        "category": "Vegetables",
-        "price": "3.83",
-        "stock": 82,
-        "stock_alert": 21,
-        "UPC": "36283787329",
-        "id": "9bb0da34-b791-11e7-bdc6-08d40cf4f343"
-    },
-    {
         "name": "Corn",
         "category": "Vegetables",
         "price": "5.56",
@@ -88,15 +61,6 @@
         "stock_alert": 76,
         "UPC": "175260669950",
         "id": "9f9eb066-b791-11e7-9cdc-08d40cf4f343"
-    },
-    {
-        "name": "Zucchini",
-        "category": "Vegetables",
-        "price": "2.67",
-        "stock": 128,
-        "stock_alert": 44,
-        "UPC": "93876759225",
-        "id": "a196dad2-b791-11e7-a927-08d40cf4f343"
     },
     {
         "name": "Asparagus",
@@ -232,5 +196,32 @@
         "stock_alert": 60,
         "UPC": "400520882761",
         "id": "64aeff5a-b7fc-11e7-98f4-08d40cf4f343"
+    },
+    {
+        "name": "Zucchini",
+        "category": "Vegetables",
+        "price": "8.19",
+        "stock": 73,
+        "stock_alert": 16,
+        "UPC": "87471722627",
+        "id": "685278ae-b90c-11e7-bab1-08d40cf4f343"
+    },
+    {
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "price": "5.67",
+        "stock": 69,
+        "stock_alert": 14,
+        "UPC": "136558613534",
+        "id": "88720bfa-b90c-11e7-adf5-08d40cf4f343"
+    },
+    {
+        "name": "Corn",
+        "category": "Vegetables",
+        "price": "9.41",
+        "stock": 83,
+        "stock_alert": 21,
+        "UPC": "708223803762",
+        "id": "9331b67e-b90c-11e7-81da-08d40cf4f343"
     }
 ]

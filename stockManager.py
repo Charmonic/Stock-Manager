@@ -97,7 +97,7 @@ def mainWindow():
     #insert all the products in the tree view
     index = 0
     for product in data:
-        tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
+        tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], str(product["UPC"]), product["id"]))
         index += 1
         
     #tree.pack(side=TOP, padx=10, pady=10)
