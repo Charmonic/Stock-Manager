@@ -4,6 +4,7 @@ from addProductWindow import *
 from deleteProductWindow import *
 from modifyProductWindow import *
 from popupWindows import *
+from purchaseProductWindow import *
 import json
 
 jsonfile = "database.json"
@@ -37,6 +38,13 @@ def modifyProduct(tree):
     else:
         selected_item = tree.selection()[0] #get selected item
         modificationWindow(tree)
+
+def purchaseProduct(tree):
+    if(len(tree.selection()) == 0):
+        printErrorWindow("No row selected")
+    else:
+        selected_item = tree.selection()[0] #get selected item
+        purchaseWindow(tree)
 
 def saveJson(tree):
     newJson = []
@@ -114,19 +122,21 @@ def mainWindow():
     buttonRefresh = Button(frame, text="Actualize with database", command=lambda: refreshResults(tree), width = buttonWidth)
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)
     buttonModify = Button(frame, text="Modify selected element", command=lambda: modifyProduct(tree), width = buttonWidth)
+    buttonPurchase = Button(frame, text="Purchase Selected element", command=lambda: purchaseProduct(tree), width = buttonWidth)
 
     buttonAdd.configure(background="#33cc33", fg="white", font="Bold")
     buttonModify.configure(background="#33cc33", fg="white", font="Bold")
     buttonDelete.configure(background="#33cc33", fg="white", font="Bold")
     buttonSave.configure(background="#ff9933", fg="white", font="Bold")
     buttonRefresh.configure(background="#3399ff", fg="white", font="Bold")
-    
+    buttonPurchase.configure(background="#FF0000", fg="white", font="Bold")    
     
     buttonAdd.grid(row=0, column=0)
     buttonModify.grid(row=0, column=1, padx=20)
     buttonDelete.grid(row=0, column=2)
     buttonRefresh.grid(row=1, column=0, pady=10)
     buttonSave.grid(row=1, column=1, padx=20)
+    buttonPurchase.grid(row=1, column=2, padx=20)
 
     root.mainloop()
     
