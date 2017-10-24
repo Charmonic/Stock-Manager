@@ -5,6 +5,7 @@ from deleteProductWindow import *
 from modifyProductWindow import *
 from popupWindows import *
 from purchaseProductWindow import *
+import os.path
 import json
 
 jsonfile = "database.json"
@@ -64,9 +65,33 @@ def saveJson(tree):
         json.dump(newJson, json_data, indent=4)
         printValidationWindow("The database has been saved")
 
+def showProfit():
+    my_file = 'profit.txt'
+    if os.path.isfile(my_file):
+        with open(my_file, 'r') as f:
+            first_line = f.readline()
+        f.close()
+        printProfitWindow("Your current profit this session is : $" + first_line)
+    else:
+        printProfitWindow("Your current profit this session is : $0")
+
+def deleteOldProfit():
+    my_file = 'profit.txt'
+    if os.path.isfile(my_file):
+        with open(my_file, 'r+') as f:
+            f.seek(0)
+            f.truncate()
+            f.seek(0)
+            f.write(str(0.0))
+            f.close()
+    else:
+        with open(my_file, 'r+') as f:
+            f.write(str(0.0))
+            f.close()        
         
 ######## Main ########
 def mainWindow():
+    
     root = Tk()
     root.title("Stock Manager")
     root.configure(background='black')
@@ -123,13 +148,15 @@ def mainWindow():
     buttonSave = Button(frame, text="Save in database", command=lambda: saveJson(tree), width = buttonWidth)
     buttonModify = Button(frame, text="Modify selected element", command=lambda: modifyProduct(tree), width = buttonWidth)
     buttonPurchase = Button(frame, text="Purchase Selected element", command=lambda: purchaseProduct(tree), width = buttonWidth)
+    buttonProfit = Button(frame, text="Show Profit for this session", command=lambda: showProfit(), width = buttonWidth)
 
     buttonAdd.configure(background="#33cc33", fg="white", font="Bold")
     buttonModify.configure(background="#33cc33", fg="white", font="Bold")
     buttonDelete.configure(background="#33cc33", fg="white", font="Bold")
     buttonSave.configure(background="#ff9933", fg="white", font="Bold")
     buttonRefresh.configure(background="#3399ff", fg="white", font="Bold")
-    buttonPurchase.configure(background="#FF0000", fg="white", font="Bold")    
+    buttonPurchase.configure(background="#FF0000", fg="white", font="Bold")
+    buttonProfit.configure(background="#33cc33", fg="white", font="Bold") 
     
     buttonAdd.grid(row=0, column=0)
     buttonModify.grid(row=0, column=1, padx=20)
@@ -137,8 +164,13 @@ def mainWindow():
     buttonRefresh.grid(row=1, column=0, pady=10)
     buttonSave.grid(row=1, column=1, padx=20)
     buttonPurchase.grid(row=1, column=2, padx=20)
+    buttonProfit.grid(row=0, column=4, padx=20)
 
+    deleteOldProfit()
     root.mainloop()
     
 
 mainWindow()
+
+
+
