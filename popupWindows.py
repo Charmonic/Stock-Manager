@@ -16,3 +16,11 @@ def printValidationWindow(text):
     txt = Label(window, text=("Success:", text))
     txt.configure(background="green", fg="white", font="bold")
     txt.pack(padx=50, pady=50)
+
+def printProfitWindow(text):
+    window = Tk()
+    window.title("Profit this session")
+    window.configure(background="green")     
+    txt = Label(window, text=(text))
+    txt.configure(background="green", fg="white", font="bold")
+    txt.pack(padx=50, pady=50)
