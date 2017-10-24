@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from popupWindows import *
 from generateNumber import *
+import os.path
 
 def purchaseWindow(tree):
     window = Tk()
@@ -37,11 +38,26 @@ def purchaseWindow(tree):
             printErrorWindow("incorrect price")
 
         else:
-            cStock = product["values"][3]
-            price = product["values"][2]
-            pStock = int(amount.get())
-            nStock = str(int(product["values"][3]) - pStock)
-            profit = (cStock - pStock)*price
+            cStock = float(product["values"][3])
+            price = float(product["values"][2])
+            pStock = float(amount.get())
+            nStock = str(float(product["values"][3]) - pStock)
+            profit = pStock*price
+            fProfit = 0.0
+
+            my_file = 'profit.txt'
+            if os.path.isfile(my_file):
+                with open(my_file,'r+') as f:
+                    first_line = f.readline()
+                    fProfit = float(first_line) + profit
+                    f.seek(0)
+                    f.truncate()
+                    f.write(str(fProfit))
+                    f.close()
+            else:
+                open(my_file,'w')
+                file.write(str(profit + fProfit))
+                file.close()
             tree.item(tree.selection()[0], values=(product["values"][0],product["values"][1],product["values"][2],nStock,product["values"][4],product["values"][5],product["values"][6]))
             printValidationWindow("You have made a purchase. Press save to Confirm purchase")
     
