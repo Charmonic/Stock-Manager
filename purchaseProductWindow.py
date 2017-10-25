@@ -9,8 +9,6 @@ def purchaseWindow(tree):
     window.title("Purchase a product")
     product = tree.item(tree.selection()[0])
 
-
-
     #label
     txt1 = Label(window, text="Product: " + product["values"][0])
     txt2 = Label(window, text="Price: " + product["values"][2])
