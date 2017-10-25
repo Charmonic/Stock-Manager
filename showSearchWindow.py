@@ -43,6 +43,7 @@ def searchWindow(tree):
                 data = json.load(json_data)
                 for elem in data:
                     if(elem['UPC'] == upc):
+                        flag = True
                         printSearchWindow("Item: " + elem['name'] + "\n Category: " + elem['category'] + "\n Price: " + str(elem['price']) +"\n Stock: "+ str(elem['stock']) +"\n Minimum: "+ str(elem['stock_alert']) +"\n UPC: "+ str(elem['UPC']) +"\n ID: "+ elem['id'])
                 if(flag == False): printSearchWindow("No Item Found")
                 
@@ -52,6 +53,7 @@ def searchWindow(tree):
                 data = json.load(json_data)
                 for elem in data:
                     if(elem['name'] == name):
+                       flag = True
                        printSearchWindow("Item: " + elem['name'] + "\n Category: " + elem['category'] + "\n Price: " + str(elem['price']) +"\n Stock: "+ str(elem['stock']) +"\n Minimum: "+ str(elem['stock_alert']) +"\n UPC: "+ str(elem['UPC']) +"\n ID: "+ elem['id'])
                 if(flag == False): printSearchWindow("No Item Found")
         else:
