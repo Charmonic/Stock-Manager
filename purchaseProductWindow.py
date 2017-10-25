@@ -74,7 +74,7 @@ def purchaseWindow(tree):
                 file.write("You purchased " + str(int(pStock)) + " of " + product["values"][0])
                 file.close()
             
-            tree.item(tree.selection()[0], values=(product["values"][0],product["values"][1],product["values"][2],int(newStock),product["values"][4],product["values"][5],product["values"][6]))
+            tree.item(tree.selection()[0], values=(product["values"][0],product["values"][1],product["values"][2],int(newStock),product["values"][4],str(product["values"][5]),product["values"][6]))
             printValidationWindow("You have made a purchase. Press save to Confirm purchase")
     
         window.destroy()

@@ -201,7 +201,7 @@
         "name": "Potatoes",
         "category": "Vegetables",
         "price": "5.67",
-        "stock": 69,
+        "stock": 68,
         "stock_alert": 14,
         "UPC": "136558613534",
         "id": "88720bfa-b90c-11e7-adf5-08d40cf4f343"
@@ -214,50 +214,5 @@
         "stock_alert": 21,
         "UPC": "708223803762",
         "id": "9331b67e-b90c-11e7-81da-08d40cf4f343"
-    },
-    {
-        "name": "Spinach",
-        "category": "Vegetables",
-        "price": "6.86",
-        "stock": 90,
-        "stock_alert": 25,
-        "UPC": "074011521882",
-        "id": "e49b0364-b991-11e7-87e4-08d40cf4f343"
-    },
-    {
-        "name": "Carrots",
-        "category": "Vegetables",
-        "price": "5.93",
-        "stock": 53,
-        "stock_alert": 6,
-        "UPC": "068399096532",
-        "id": "3a7e5726-b992-11e7-b01e-08d40cf4f343"
-    },
-    {
-        "name": "Corn",
-        "category": "Vegetables",
-        "price": "8.38",
-        "stock": 179,
-        "stock_alert": 69,
-        "UPC": "027084954059",
-        "id": "fb98a9b0-b992-11e7-b6a7-08d40cf4f343"
-    },
-    {
-        "name": "Zucchini",
-        "category": "Vegetables",
-        "price": "4.1",
-        "stock": 115,
-        "stock_alert": 37,
-        "UPC": "076885810435",
-        "id": "64495b54-b993-11e7-8d28-08d40cf4f343"
-    },
-    {
-        "name": "Corn",
-        "category": "Vegetables",
-        "price": "5.1",
-        "stock": 81,
-        "stock_alert": 20,
-        "UPC": "004882475705",
-        "id": "7a547dbe-b993-11e7-a3eb-08d40cf4f343"
     }
 ]
