@@ -5,6 +5,7 @@ from deleteProductWindow import *
 from modifyProductWindow import *
 from popupWindows import *
 from purchaseProductWindow import *
+from showSearchWindow import *
 import os.path
 import json
 
@@ -84,6 +85,9 @@ def showPurchase():
         printProfitWindow("Your most recent purchase was: " + first_line)
     else:
         printProfitWindow("No recent purchase this session")
+
+def showSearch(tree):
+    searchWindow(tree)
 
 def deleteOldProfit():
     my_file = 'profit.txt'
@@ -173,6 +177,7 @@ def mainWindow():
     buttonPurchase = Button(frame, text="Purchase Selected element", command=lambda: purchaseProduct(tree), width = buttonWidth)
     buttonProfit = Button(frame, text="Show Profit for this session", command=lambda: showProfit(), width = buttonWidth)
     buttonPrevious = Button(frame, text="Show Last Purchase", command=lambda: showPurchase(), width = buttonWidth)
+    buttonSearch = Button(frame, text="Search for an Item", command=lambda: showSearch(tree), width = buttonWidth)
 
     buttonAdd.configure(background="#33cc33", fg="white", font="Bold")
     buttonModify.configure(background="#33cc33", fg="white", font="Bold")
@@ -181,7 +186,8 @@ def mainWindow():
     buttonRefresh.configure(background="#3399ff", fg="white", font="Bold")
     buttonPurchase.configure(background="#FF0000", fg="white", font="Bold")
     buttonProfit.configure(background="#33cc33", fg="white", font="Bold")
-    buttonPrevious.configure(background="#33cc33", fg="white", font="Bold") 
+    buttonPrevious.configure(background="#33cc33", fg="white", font="Bold")
+    buttonSearch.configure(background="#3399ff", fg="white", font="Bold") 
     
     buttonAdd.grid(row=0, column=0)
     buttonModify.grid(row=0, column=1, padx=20)
@@ -191,6 +197,7 @@ def mainWindow():
     buttonPurchase.grid(row=1, column=2, padx=20)
     buttonProfit.grid(row=0, column=4, padx=20)
     buttonPrevious.grid(row=1, column=4, padx=20)
+    buttonSearch.grid(row=0, column=5, padx=20)
 
     deleteOldProfit()
     root.mainloop()
