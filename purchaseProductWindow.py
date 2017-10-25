@@ -42,9 +42,11 @@ def purchaseWindow(tree):
             price = float(product["values"][2])
             pStock = float(amount.get())
             nStock = str(float(product["values"][3]) - pStock)
+            newStock = cStock - pStock
             profit = pStock*price
             fProfit = 0.0
 
+            #handles profit
             my_file = 'profit.txt'
             if os.path.isfile(my_file):
                 with open(my_file,'r+') as f:
@@ -58,7 +60,22 @@ def purchaseWindow(tree):
                 open(my_file,'w')
                 file.write(str(profit + fProfit))
                 file.close()
-            tree.item(tree.selection()[0], values=(product["values"][0],product["values"][1],product["values"][2],nStock,product["values"][4],product["values"][5],product["values"][6]))
+
+            #handles last transaction
+            my_file = 'purchase.txt'
+            if os.path.isfile(my_file):
+                with open(my_file,'r+') as f:
+                    f.seek(0)
+                    f.truncate()
+                    f.write("You purchased " + str(int(pStock))+ " of " + product["values"][0])
+                    f.close()
+            else:
+                open(my_file,'w')
+                file.write("You purchased " + str(int(pStock)) + " of " + product["values"][0])
+                file.close()
+            
+            tree.item(tree.selection()[0], values=(product["values"][0],product["values"][1],product["values"][2],int(newStock),product["values"][4],product["values"][5],product["values"][6]))
             printValidationWindow("You have made a purchase. Press save to Confirm purchase")
     
         window.destroy()
+            
