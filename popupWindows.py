@@ -24,3 +24,15 @@ def printProfitWindow(text):
     txt = Label(window, text=(text))
     txt.configure(background="green", fg="white", font="bold")
     txt.pack(padx=50, pady=50)
+
+def printSearchWindow(text):
+    window = Tk()
+    window.title("Search Results")
+
+    #label
+    txt1 = Label(window, text=("The First Result Matching Your Query is: "))
+    txt2 = Label(window, text=(text))
+    
+    #grid
+    txt2.grid(row=1, column=1, padx=10)
+    txt2.grid(row=0, column=1, padx=10)
