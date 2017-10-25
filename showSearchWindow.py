@@ -38,33 +38,30 @@ def searchWindow(tree):
             printErrorWindow("empty inputs")
 
         elif (name == ""):
-            flag = True
+            flag = False
             with open(jsonfile) as json_data:
                 data = json.load(json_data)
                 for elem in data:
                     if(elem['UPC'] == upc):
-                        printSearchWindow("Item: " + elem['name'] + " Category: " + elem['category'] + " Price: " + str(elem['price']) +" Stock: "+ str(elem['stock']) +" Minimum: "+ str(elem['stock_alert']) +" UPC: "+ str(elem['UPC']) +" ID: "+ elem['id'])
-                        break
+                        printSearchWindow("Item: " + elem['name'] + "\n Category: " + elem['category'] + "\n Price: " + str(elem['price']) +"\n Stock: "+ str(elem['stock']) +"\n Minimum: "+ str(elem['stock_alert']) +"\n UPC: "+ str(elem['UPC']) +"\n ID: "+ elem['id'])
                 if(flag == False): printSearchWindow("No Item Found")
                 
         elif (upc == ""):
-            flag = True
+            flag = False
             with open(jsonfile) as json_data:
                 data = json.load(json_data)
                 for elem in data:
                     if(elem['name'] == name):
-                       printSearchWindow("Item: " + elem['name'] + " Category: " + elem['category'] + " Price: " + str(elem['price']) +" Stock: "+ str(elem['stock']) +" Minimum: "+ str(elem['stock_alert']) +" UPC: "+ str(elem['UPC']) +" ID: "+ elem['id'])
-                       break
+                       printSearchWindow("Item: " + elem['name'] + "\n Category: " + elem['category'] + "\n Price: " + str(elem['price']) +"\n Stock: "+ str(elem['stock']) +"\n Minimum: "+ str(elem['stock_alert']) +"\n UPC: "+ str(elem['UPC']) +"\n ID: "+ elem['id'])
                 if(flag == False): printSearchWindow("No Item Found")
         else:
             with open(jsonfile) as json_data:
-                flag = True
+                flag = False
                 data = json.load(json_data)
                 for elem in data:
                     if(elem['UPC'] == upc and elem['name'] == name):
                         flag = True
-                        printSearchWindow("Item: " + elem['name'] + " Category: " + elem['category'] + " Price: " + str(elem['price']) +" Stock: "+ str(elem['stock']) +" Minimum: "+ str(elem['stock_alert']) +" UPC: "+ str(elem['UPC']) +" ID: "+ elem['id'])
-                        break
+                        printSearchWindow("Item: " + elem['name'] + "\n Category: " + elem['category'] + "\n Price: " + str(elem['price']) +"\n Stock: "+ str(elem['stock']) +"\n Minimum: "+ str(elem['stock_alert']) +"\n UPC: "+ str(elem['UPC']) +"\n ID: "+ elem['id'])
                 if(flag == False): printSearchWindow("No Item Found")
 
         
