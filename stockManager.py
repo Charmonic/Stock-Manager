@@ -75,6 +75,16 @@ def showProfit():
     else:
         printProfitWindow("Your current profit this session is : $0")
 
+def showPurchase():
+    my_file = 'purchase.txt'
+    if os.path.isfile(my_file):
+        with open(my_file, 'r') as f:
+            first_line = f.readline()
+        f.close()
+        printProfitWindow("Your most recent purchase was: " + first_line)
+    else:
+        printProfitWindow("No recent purchase this session")
+
 def deleteOldProfit():
     my_file = 'profit.txt'
     if os.path.isfile(my_file):
@@ -87,7 +97,20 @@ def deleteOldProfit():
     else:
         with open(my_file, 'r+') as f:
             f.write(str(0.0))
-            f.close()        
+            f.close()
+            
+    my_file = 'purchase.txt'
+    if os.path.isfile(my_file):
+        with open(my_file, 'r+') as f:
+            f.seek(0)
+            f.truncate()
+            f.seek(0)
+            f.write("nothing")
+            f.close()
+    else:
+        with open(my_file, 'w+') as f:
+            f.write("nothing")
+            f.close()
         
 ######## Main ########
 def mainWindow():
@@ -130,7 +153,7 @@ def mainWindow():
     #insert all the products in the tree view
     index = 0
     for product in data:
-        tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], str(product["UPC"]), product["id"]))
+        tree.insert("" , index, text=product["name"], values=(product["name"], product["category"], product["price"], product["stock"], product["stock_alert"], product["UPC"], product["id"]))
         index += 1
         
     #tree.pack(side=TOP, padx=10, pady=10)
@@ -149,6 +172,7 @@ def mainWindow():
     buttonModify = Button(frame, text="Modify selected element", command=lambda: modifyProduct(tree), width = buttonWidth)
     buttonPurchase = Button(frame, text="Purchase Selected element", command=lambda: purchaseProduct(tree), width = buttonWidth)
     buttonProfit = Button(frame, text="Show Profit for this session", command=lambda: showProfit(), width = buttonWidth)
+    buttonPrevious = Button(frame, text="Show Last Purchase", command=lambda: showPurchase(), width = buttonWidth)
 
     buttonAdd.configure(background="#33cc33", fg="white", font="Bold")
     buttonModify.configure(background="#33cc33", fg="white", font="Bold")
@@ -156,7 +180,8 @@ def mainWindow():
     buttonSave.configure(background="#ff9933", fg="white", font="Bold")
     buttonRefresh.configure(background="#3399ff", fg="white", font="Bold")
     buttonPurchase.configure(background="#FF0000", fg="white", font="Bold")
-    buttonProfit.configure(background="#33cc33", fg="white", font="Bold") 
+    buttonProfit.configure(background="#33cc33", fg="white", font="Bold")
+    buttonPrevious.configure(background="#33cc33", fg="white", font="Bold") 
     
     buttonAdd.grid(row=0, column=0)
     buttonModify.grid(row=0, column=1, padx=20)
@@ -165,6 +190,7 @@ def mainWindow():
     buttonSave.grid(row=1, column=1, padx=20)
     buttonPurchase.grid(row=1, column=2, padx=20)
     buttonProfit.grid(row=0, column=4, padx=20)
+    buttonPrevious.grid(row=1, column=4, padx=20)
 
     deleteOldProfit()
     root.mainloop()
