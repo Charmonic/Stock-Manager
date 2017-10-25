@@ -33,10 +33,10 @@ def createNewProduct(name, category, price, stock, stock_alert, upc, windowAdd, 
         newProduct["price"] = price
         newProduct["stock"] = stock
         newProduct["stock_alert"] = stock_alert
-        newProduct["UPC"] = upc
+        newProduct["UPC"] = str(upc)
 
         #insert the product in the treeview
-        tree.insert("" , "end", text=newProduct["name"], values=(newProduct["name"], newProduct["category"], newProduct["price"], newProduct["stock"], newProduct["stock_alert"], newProduct["UPC"], newProduct["id"]))
+        tree.insert("" , "end", text=newProduct["name"], values=(newProduct["name"], newProduct["category"], newProduct["price"], newProduct["stock"], newProduct["stock_alert"], str(newProduct["UPC"]), newProduct["id"]))
 
         windowAdd.destroy()
         printValidationWindow("Your product has been temporary added.\nClick on save to push the modifications to the database")
