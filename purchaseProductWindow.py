@@ -21,10 +21,10 @@ def purchaseWindow(tree):
     amount.insert(0,product["values"][3])
 
     #grid
-    txt1.grid(row=1, sticky=E, padx=10)
-    txt2.grid(row=2, sticky=E, padx=10)
-    txt4.grid(row=1, column=3, padx=40)
-    amount.grid(row=1, column=4, padx=10,pady=10)
+    txt1.grid(row=1, column=1, padx=10)
+    txt2.grid(row=1, column=2, padx=10)
+    txt4.grid(row=2, column=1, padx=40)
+    amount.grid(row=2, column=2, padx=10,pady=10)
 
     #button
     submit = Button(window, text="Purchase", command=lambda: purchase(amount.get(), window, tree))
